@@ -35,6 +35,28 @@ It's possible that clangd is having trouble parsing the OpenFOAM code in your di
 One thing you can try is to generate a compilation database for your OpenFOAM code using the bear utility. bear intercepts the commands used to build your code and generates a JSON file that clangd
 can use to understand your project's build configuration.
 
-```bear ./Allwmake
+```
+bear ./Allwmake
 ```
 
+### Copilot:
+Copilot requests Node.js version to 16.x or newer.
+First check the existing verison:
+
+```
+node -v
+```
+
+If it is older you can do the following:
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+```
+
+```
+source ~./bashrc
+```
+
+```
+nvm install node
+```
