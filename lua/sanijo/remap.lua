@@ -42,10 +42,23 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/sanijo/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- Set options to open splits below and to the right
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+-- Map <leader>ev to open a new vertical split on the right side
+vim.keymap.set('n', '<leader>ev', ':vnew<CR>', { noremap = true })
+
+-- Map <leader>eh to open a new horizontal split on the bottom
+vim.keymap.set('n', '<leader>eh', ':new<CR>', { noremap = true })
+
+
+
 
