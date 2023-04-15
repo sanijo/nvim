@@ -1,4 +1,4 @@
-require("cloak").setup({
+  require("cloak").setup({
   enabled = true,
   cloak_character = "*",
   -- The applied highlight group (colors) on the cloaking, see `:h highlight`.
@@ -19,4 +19,3 @@ require("cloak").setup({
     },
   },
 })
-

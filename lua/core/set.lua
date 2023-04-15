@@ -1,5 +1,8 @@
 vim.opt.guicursor = ""
 
+vim.g.mapleader = " " 
+vim.g.maplocalleader = " "
+
 -- Set options
 vim.opt.number = true                   -- display line numbers
 vim.opt.relativenumber = true           -- display relative line numbers
@@ -10,7 +13,6 @@ vim.opt.swapfile = false                -- disable swap file creation
 vim.opt.showmode = false                -- don't display the current mode
 vim.opt.shortmess:append("c")           -- don't show completion messages
 vim.opt.omnifunc = "syntaxcomplete#Complete" -- set Omni completion function
-
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -42,12 +44,3 @@ vim.opt.colorcolumn = "80"
 vim.opt.textwidth = 80
 vim.opt.wrap = true
 vim.opt.linebreak = true -- go to new line
-
--- Define highlights inside an autocommand
-vim.cmd([[augroup highlight_config]])
-vim.cmd([[  autocmd!]])
-vim.cmd([[  autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=#592929]])
-vim.cmd([[  autocmd ColorScheme * match ExtraWhitespace /\s\+$/]])
-vim.cmd([[  autocmd ColorScheme * highlight OverLength ctermbg=red ctermfg=white guibg=#592929]])
-vim.cmd([[  autocmd ColorScheme * match OverLength /\%81v.\+/]])
-vim.cmd([[augroup END]])
