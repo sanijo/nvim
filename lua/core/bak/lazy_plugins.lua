@@ -99,7 +99,7 @@ local plugins = {
     },
   },
   "folke/zen-mode.nvim",
---  "github/copilot.vim",
+  "github/copilot.vim",
   "eandrju/cellular-automaton.nvim",
   "laytan/cloak.nvim",
 

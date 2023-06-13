@@ -5,23 +5,22 @@ lsp.preset("recommended")
 lsp.ensure_installed({
     'clangd',
     'pyright',
+    'gopls',
     'tsserver',
     'rust_analyzer',
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
+lsp.nvim_workspace()
 
 -- snippets
 local cmp = require('cmp')
+cmp.setup {
+  completion = {
+    autocomplete = false,
+  }
+}
+
 require("luasnip.loaders.from_vscode").lazy_load()
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -31,8 +30,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ["<C-Space>"] = cmp.mapping.complete(),
 })
 
---cmp_mappings['<Tab>'] = nil
---cmp_mappings['<S-Tab>'] = nil
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
@@ -57,7 +56,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
   vim.keymap.set("n", "gr", function() require('telescope.builtin').lsp_references() end, opts)
   vim.keymap.set("n", "ca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "rn", function() vim.lsp.buf.rename() end, opts)
+  vim.keymap.set("n", "rnm", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)

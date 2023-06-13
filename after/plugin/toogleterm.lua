@@ -1,7 +1,7 @@
 require("toggleterm").setup{
 	direction = "horizontal",
 	size = 15,
-	open_mapping = [[<leader>te]]
+	open_mapping = [[<leader>tt]]
 }
 
 -- Function to set custom mappings for ToggleTerm
