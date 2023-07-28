@@ -15,11 +15,11 @@ lsp.nvim_workspace()
 
 -- snippets
 local cmp = require('cmp')
-cmp.setup {
-  completion = {
-    autocomplete = false,
-  }
-}
+--cmp.setup {
+--  completion = {
+--    autocomplete = false,
+--  }
+--}
 
 require("luasnip.loaders.from_vscode").lazy_load()
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
