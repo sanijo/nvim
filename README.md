@@ -1,5 +1,6 @@
 ### Note
 Build neovim:
+* v0.9.2 works fine (checkout tag v0.9.2)
 ```
 https://github.com/neovim/neovim/wiki/Building-Neovim
 ```

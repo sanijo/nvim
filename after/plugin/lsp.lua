@@ -4,10 +4,10 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     'clangd',
-    'pyright',
-    'gopls',
-    'tsserver',
-    'rust_analyzer',
+--    'pyright',
+--    'gopls',
+--    'tsserver',
+--    'rust_analyzer',
 })
 
 -- Fix Undefined global 'vim'
