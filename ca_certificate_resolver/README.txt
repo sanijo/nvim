@@ -1,4 +1,6 @@
-I could not turn off NetScope as suggested. (no privileges)
+From:
+
+https://stackoverflow.com/questions/67208384/unable-to-install-go-tools-on-wsl
 
 Summing other answers made a script, it works for Ubuntu (wsl2 for Windows)
 
