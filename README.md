@@ -4,6 +4,9 @@ Build neovim:
 ```
 https://github.com/neovim/neovim/wiki/Building-Neovim
 ```
+* WARNING: on corporate machine SSL certification fails so easiest workaround is:
+1. git config --global http.sslVerify false
+2. touch ~/.curlrc and add following line there: insecure
 ### Forked from ThePrimeagen
 ```
 https://github.com/ThePrimeagen/init.lua.git
