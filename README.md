@@ -7,6 +7,8 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
 * WARNING: on corporate machine SSL certification fails so easiest workaround is:
 1. git config --global http.sslVerify false
 2. touch ~/.curlrc and add following line there: insecure
+3. if still having issues with the certificates check contents of
+   ca_certificate_resolver folder
 ### Forked from ThePrimeagen
 ```
 https://github.com/ThePrimeagen/init.lua.git
