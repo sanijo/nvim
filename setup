@@ -17,12 +17,12 @@ if [ -d "${HOME_DIR}/.local/share/nvim" ]; then
   rm -rf "${HOME_DIR}/.local/share/nvim"
 fi
 
-for json_file in "${HOME_DIR}/.config/nvim/"*.json; do
-  if [ -f "$json_file" ]; then
-    echo "Deleting ${HOME_DIR}/.config/nvim/*json"
-    rm -f "$json_file"
-  fi
-done
+#for json_file in "${HOME_DIR}/.config/nvim/"*.json; do
+#  if [ -f "$json_file" ]; then
+#    echo "Deleting ${HOME_DIR}/.config/nvim/*json"
+#    rm -f "$json_file"
+#  fi
+#done
 
 if [ -f "${HOME_DIR}/.config/nvim/lua/core/plugins.lua" ]; then
   echo "Deleting ${HOME_DIR}/.config/nvim/lua/core/plugins.lua"

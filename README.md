@@ -4,6 +4,64 @@ Build neovim:
 ```
 https://github.com/neovim/neovim/wiki/Building-Neovim
 ```
+
+* Install JetBrainsMono font and set it in terminal options:
+```
+https://www.nerdfonts.com/font-downloads
+```
+
+## Step-by-step Neovim Installation (macOS Tarball)
+* On MacOS download precompiled binary from:
+```
+https://github.com/neovim/neovim/releases/tag/v0.9.2
+```
+
+Make the directory and extract Neovim there:
+
+```
+    mkdir -p ~/.local
+    tar xzf nvim-macos.tar.gz -C ~/.local
+```
+
+This creates:
+
+```
+    ~/.local/nvim-macos/bin/nvim
+```
+
+To make life easier, symlink the binary to `~/.local/bin`:
+
+```
+    mkdir -p ~/.local/bin
+    ln -sf ~/.local/nvim-macos/bin/nvim ~/.local/bin/nvim
+```
+
+Add that bin directory to your PATH (for zsh):
+
+Add this to your `~/.zshrc`:
+
+```
+    export PATH="$HOME/.local/bin:$PATH"
+```
+
+Reload your shell:
+
+```
+    source ~/.zshrc
+```
+
+Test your installation:
+
+```
+    which nvim
+```
+
+Expected output:
+
+```
+    /Users/YOU/.local/bin/nvim
+```
+
 * WARNING: on corporate machine SSL certification fails so easiest workaround is:
 1. git config --global http.sslVerify false
 2. touch ~/.curlrc and add following line there: insecure
@@ -52,6 +110,10 @@ want. Default is lazy.
   ```
   and press enter or write lazy.
 
+* Before opening nvim do:
+  ```
+  cp -r lazy-lock.json.bak lazy-lock.json
+  ```
 * Open nvim and press and wait until lazy installs all the plugins. That's it.
 
 ### Foam code:
